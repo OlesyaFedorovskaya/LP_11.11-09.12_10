@@ -13,9 +13,9 @@ int num2 = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine("Является ли одно число квадратом другого: ");
 
-Console.WriteLine(square(num1, num2) ? "Да" : "Нет");
+Console.WriteLine(Square(num1, num2) ? "Да" : "Нет");
 
-bool square(int firstNum, int secondNum)
+bool Square(int firstNum, int secondNum)
 {
     return (firstNum == secondNum * secondNum) || (secondNum == firstNum * firstNum);
 }
