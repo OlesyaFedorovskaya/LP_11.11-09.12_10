@@ -18,9 +18,7 @@ bool Palindrom()
     int numb4 = count % 100 / 10;
     int numb5 = count % 10;
 
-    return (numb1 == numb5 || numb2 == numb4);
     return (numb1 == numb5 && numb2 == numb4);
-
 }
 
 Console.WriteLine(Palindrom() 
