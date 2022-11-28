@@ -11,7 +11,7 @@ int B = Convert.ToInt32(Console.ReadLine());
 
 if (B <= 0)
 {
-    Console.WriteLine("Введено неверное число B");
+    Console.WriteLine("Введено ненатуральное число B");
 }
 
 else

@@ -5,3 +5,27 @@
 // 82 -> 10
 // 9012 -> 12
 
+Console.WriteLine("Введите число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+
+if (number <= 0)
+{
+    Console.WriteLine("Введены неверные данные");
+}
+
+else
+{
+    int Sum(int num)
+    {
+        int result = 0;
+        while (num > 0)
+        {
+            result = result + num % 10;
+            num = num / 10;
+        }
+        return result;
+    }
+
+    int sum = Sum(number);
+    Console.WriteLine($"Сумма цифр числа {number} = {sum}");
+}
