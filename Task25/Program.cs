@@ -5,11 +5,11 @@
 // 2, 4 -> 16
 
 Console.WriteLine("Введите число A: ");
-int A = Convert.ToInt32(Console.ReadLine());
+int a = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите число B: ");
-int B = Convert.ToInt32(Console.ReadLine());
+int b = Convert.ToInt32(Console.ReadLine());
 
-if (B <= 0)
+if (b <= 0)
 {
     Console.WriteLine("Введено ненатуральное число B");
 }
@@ -25,5 +25,5 @@ int Exponentiation(int c, int d)
     return result;
 }
 
-int exponentiation = Exponentiation(A, B);
-Console.WriteLine($"Число {A} в степени {B} равно -> {exponentiation}");
+int exponentiation = Exponentiation(a, b);
+Console.WriteLine($"Число {a} в степени {b} равно -> {exponentiation}");
