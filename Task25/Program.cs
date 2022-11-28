@@ -14,18 +14,16 @@ if (B <= 0)
     Console.WriteLine("Введено ненатуральное число B");
 }
 
-else
+int Exponentiation(int c, int d)
 {
-    int Exponentiation(int c, int d)
+    int result = 1;
+    for (int i = 1; i <= d; i++)
     {
-        int result = 1;
-        for (int i = 1; i <= d; i++)
-        {
-            result = c * result;
-        }
-
-        return result;
+        result = c * result;
     }
-    int exponentiation = Exponentiation(A, B);
-    Console.WriteLine($"Число {A} в степени {B} равно -> {exponentiation}");
+
+    return result;
 }
+
+int exponentiation = Exponentiation(A, B);
+Console.WriteLine($"Число {A} в степени {B} равно -> {exponentiation}");
