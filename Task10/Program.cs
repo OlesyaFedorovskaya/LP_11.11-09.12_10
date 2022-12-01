@@ -8,6 +8,11 @@
 Console.WriteLine("Введите трехзначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
+if (number >= 100 && number <= 999)
+{
+    Console.WriteLine("Введено не трехзначное число");
+}
+
 int SecondDigit(int numb)
 {
     int firstDigit = numb % 100;
@@ -19,11 +24,16 @@ int SecondDigit(int numb)
 
 //int SecondDigit(int numb)
 //{
-    //int firstDigit = numb % 100;
-    //int thirdDigit = numb % 10;
-    //int result = (firstDigit - thirdDigit) / 10;
-    //return result;
+//int firstDigit = numb % 100; 
+//int thirdDigit = numb % 10;
+//int result = (firstDigit - thirdDigit) / 10;
+//return result;
 //}
 
-Console.WriteLine("Вторая цифра введенного числа будет: ");
-Console.WriteLine($"{SecondDigit(number)}");
+//if (number >= 100 && number <= 999)
+//{
+//    Console.WriteLine("Введено не трехзначное число");
+//}
+
+int secondDigit = SecondDigit(number);
+Console.WriteLine($"Вторая цифра введенного числа будет: {secondDigit}");
