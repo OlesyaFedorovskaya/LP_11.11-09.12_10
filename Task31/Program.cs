@@ -49,6 +49,7 @@ int GetSumPositiveElem(int[] arr)
         if (arr[i] > 0) sum += arr[i]; // sumPositive = sumPositive + arr[i];
     return sum;
 }
+
 int[] array = CreateArrayRndInt(45, -99, 99);
 PrintArray(array);
 int sumNegative = GetSumNegativeElem(array);
