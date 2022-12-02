@@ -27,9 +27,6 @@ void PrintArray(int[] arr)
     Console.WriteLine("]");
 }
 
-int[] array = NewArrayRandom(5, 100, 999);
-PrintArray(array);
-
 int EvenNumber(int[] arr)
 {
     int count = 0;
@@ -39,6 +36,9 @@ int EvenNumber(int[] arr)
     }
     return count;
 }
+
+int[] array = NewArrayRandom(5, 100, 999);
+PrintArray(array);
 
 int evenNumber = EvenNumber(array);
 Console.WriteLine($"Количество четных чисел в массиве --> {evenNumber}");
