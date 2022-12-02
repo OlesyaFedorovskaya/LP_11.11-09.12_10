@@ -26,10 +26,30 @@ void PrintArray(double[] arr)
     Console.WriteLine("]");
 }
 
+double MaxDiffElem(double[] arr)
+{
+    double maxElem = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i] > maxElem) maxElem = arr[i];
+    }
+    return maxElem;
+}
 
+double MinDiffElem(double[] arr)
+{
+    double minElem = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i] < minElem) minElem = arr[i];
+    }
+    return minElem;
+}
 
-
-
-
-double[] array = CreateArrayRndDouble(5, 0, 10);
+double[] array = CreateArrayRndDouble(5, 1, 100);
 PrintArray(array);
+double maxDiffElem = MaxDiffElem(array);
+double minDiffElem = MinDiffElem(array);
+double difference = maxDiffElem - minDiffElem;
+Console.WriteLine(@$"Разница между максимальным и минимальным элементами массива равна:
+ {Math.Round(difference, 2)}");
