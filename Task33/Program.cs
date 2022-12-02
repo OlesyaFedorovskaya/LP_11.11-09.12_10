@@ -27,8 +27,6 @@ void PrintArray(int[] arr)
     Console.WriteLine("]");
 }
 
-int[] array = CreateArrayRndInt(5, 0, 999);
-PrintArray(array);
 bool FindNumberArray(int[] arr, int numb)
 {
     for (int i = 0; i < arr.Length; i++)
@@ -37,6 +35,9 @@ bool FindNumberArray(int[] arr, int numb)
     }
     return false;
 }
+
+int[] array = CreateArrayRndInt(5, 0, 999);
+PrintArray(array);
 
 Console.Write("Введите искомое число: ");
 int number = Convert.ToInt32(Console.ReadLine());
