@@ -2,14 +2,14 @@
 
 double[] CreateArrayRndDouble(int size, int min, int max)
 {
-double[] arr = new double[size];
-Random rnd = new Random();
+    double[] arr = new double[size];
+    Random rnd = new Random();
 
-for (int i = 0; i < arr.Length; i++)
-{
-arr[i] = rnd.NextDouble() * (max - min) + min;
-}
-return arr;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        arr[i] = rnd.NextDouble() * (max - min) + min;
+    }
+    return arr;
 }
 
 void PrintArray(double[] arr)
@@ -23,3 +23,5 @@ void PrintArray(double[] arr)
     Console.WriteLine("]");
 }
 
+double[] array = CreateArrayRndDouble(5, 0, 10);
+PrintArray(array);
