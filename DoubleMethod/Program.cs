@@ -7,7 +7,7 @@ double[] CreateArrayRndDouble(int size, int min, int max)
 
     for (int i = 0; i < arr.Length; i++)
     {
-        arr[i] = rnd.NextDouble() * (max - min) + min;
+        arr[i] = Math.Round(rnd.NextDouble() * (max - min) + min, 2);
     }
     return arr;
 }
