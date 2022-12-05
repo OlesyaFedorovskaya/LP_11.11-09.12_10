@@ -38,16 +38,14 @@ int[] Binary(int numb)
     int[] bin = new int[digits];
     for (int i = 0; i < bin.Length; i++)
     {
-        bin[i] = numb % 2;
+        bin[bin.Length - i - 1] = numb % 2;
         numb /= 2;
     }
     return bin;
 }
 
-
 Console.Write("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 int[] binary = Binary(number);
-Array.Reverse(binary);
 //Console.WriteLine(Binary(number));
 PrintArray(binary);
