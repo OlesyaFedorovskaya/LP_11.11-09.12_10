@@ -25,7 +25,7 @@ double Y(double b1, double k1)
 {
     double x = X(b1, k1, b2, k2);
     double y = k1 * x + b1;
-    return x;
+    return y;
 }
 
 double x = X(b1, k1, b2, k2);
