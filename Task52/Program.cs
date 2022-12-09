@@ -34,12 +34,41 @@ void PrintMatrix(int[,] matrix)
         Console.Write("|");
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j], 4}, ");
-            else Console.Write($"{matrix[i, j], 4}");
+            if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j],4}, ");
+            else Console.Write($"{matrix[i, j],4}");
         }
         Console.WriteLine("|");
     }
 }
 
+double[] SearchArithmeticMean(int[,] matrix)
+{
+    double[] arr = new double[matrix.GetLength(1)];
+    for (int j = 0; j < matrix.GetLength(1); j++)
+    {
+        double sum = 0;
+        for (int i = 0; i < matrix.GetLength(0); i++)
+        {
+            sum += matrix[i, j];
+        }
+        arr[j] = Math.Round(sum / matrix.GetLength(0), 2);
+    }
+    return arr;
+}
+
+void PrintArray(double[] arr)
+{
+    Console.Write("[");
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (i < arr.Length - 1) Console.Write($"{arr[i]}, ");
+        else Console.Write($"{arr[i]}");
+    }
+    Console.WriteLine("]");
+}
+
 int[,] array2D = CreateMatrixRndInt(3, 4, 1, 9);
 PrintMatrix(array2D);
+double[] array = SearchArithmeticMean(array2D);
+Console.Write("Среднее арифметическое элементов в каждом столбце равно: ");
+PrintArray(array);
