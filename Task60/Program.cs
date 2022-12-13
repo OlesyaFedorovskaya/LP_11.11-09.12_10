@@ -21,14 +21,14 @@ int[,,] CreateMatrixRndInt(int rows, int columns, int depth, int min, int max)
             for (int k = 0; k < matrix.GetLength(2); k++) // depth
             {
                 matrix[i, j, k] = rnd.Next(min, max + 1); // 2 - 3
-                Console.Write($"{matrix[i, j, k]} ({i}, {j}, {k})")
+                Console.Write($"{matrix[i, j, k]} ({i}, {j}, {k})");
             }
         }
     }
     return matrix;
 }
 
-void PrintMatrix(int[,,] matrix)
+void PrintMatrix(int[,,] matrix, int )
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
@@ -44,5 +44,5 @@ void PrintMatrix(int[,,] matrix)
     }
 }
 
-int[,] array3D = CreateMatrixRndInt(4, 4, 4, 1, 9);
+int[,,] array3D = CreateMatrixRndInt(2 * 2 * 2, 1, 9);
 PrintMatrix(array3D);
