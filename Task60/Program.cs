@@ -14,35 +14,33 @@ int[,,] CreateMatrixRndInt(int rows, int columns, int depth, int min, int max)
     int[,,] matrix = new int[rows, columns, depth];  // 0,1,2
     Random rnd = new Random();
 
-    for (int i = 0; i < matrix.GetLength(0); i++) //строки
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        for (int j = 0; j < matrix.GetLength(1); j++) // столбцы
+        for (int j = 0; j < matrix.GetLength(1); j++) 
         {
-            for (int k = 0; k < matrix.GetLength(2); k++) // depth
+            for (int k = 0; k < matrix.GetLength(2); k++) 
             {
-                matrix[i, j, k] = rnd.Next(min, max + 1); // 2 - 3
-                Console.Write($"{matrix[i, j, k]} ({i}, {j}, {k})");
+                matrix[i, j, k] = rnd.Next(min, max + 1);
             }
         }
     }
     return matrix;
 }
 
-void PrintMatrix(int[,,] matrix, int )
+void PrintMatrix3D(int[,,] matrix)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
         Console.Write("|");
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            Console.Write("|");
             for (int k = 0; k < matrix.GetLength(1); k++)
-                if (k < matrix.GetLength(2) - 1) Console.Write($"{matrix[i, j, k],4}, ");
-                else Console.Write($"{matrix[i, j, k],4}");
+                if (k < matrix.GetLength(2) - 0) Console.Write($"{matrix[i, j, k],4} ({i}, {j}, {k})");
+                else Console.Write($"{matrix[i, j, k],4}({i}, {j}, {k})");
         }
         Console.WriteLine("|");
     }
 }
 
-int[,,] array3D = CreateMatrixRndInt(2 * 2 * 2, 1, 9);
-PrintMatrix(array3D);
+int[,,] array3D = CreateMatrixRndInt(2, 2, 2, 10, 99);
+PrintMatrix3D(array3D);
