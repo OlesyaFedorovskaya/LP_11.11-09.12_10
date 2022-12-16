@@ -9,3 +9,11 @@ int number1 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите второе натуральное число: ");
 int number2 = Convert.ToInt32(Console.ReadLine());
 
+int NaturalNumbers(int num1, int num2)
+{
+    if (num1 == num2) return num2;
+    else if (num1 < num2) return num2 + NaturalNumbers(num1, num2 - 1);
+    else return num2 + NaturalNumbers(num1, num2 + 1);
+}
+
+Console.WriteLine(NaturalNumbers(number1, number2));
